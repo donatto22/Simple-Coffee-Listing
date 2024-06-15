@@ -1,0 +1,13 @@
+* {
+    --gris-claro: #6F757C;
+    --negro-claro: #1B1D1F;
+    --negro: #111315;
+    --verde: #BEE3CC;
+    --blanco: #FEF7EE;
+    --amarillo: #F6C768;
+    --rojo: #ED735D;
+}
+
+body {
+    background-color: var(--negro);
+}

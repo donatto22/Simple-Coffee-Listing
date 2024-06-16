@@ -1,4 +1,8 @@
-* {
+/* este archivo sirve para resetear los margenes y estilos */
+@import url('./normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
     --gris-claro: #6F757C;
     --negro-claro: #1B1D1F;
     --negro: #111315;
@@ -9,5 +13,148 @@
 }
 
 body {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
     background-color: var(--negro);
+    color: var(--blanco);
+}
+
+header {
+    z-index: -1;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    padding-bottom: 6em;
+}
+
+main > div {
+    background-color: var(--negro-claro);
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -14em;
+    padding: 1em 0;
+}
+
+#listaDeCafe {
+    width: 80%;
+    margin: 4em auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.imageDiv {
+    position: relative;
+}
+
+.popularSpan {
+    background-color: var(--amarillo);
+    color: var(--negro-claro);
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 4px 10px;
+    font-weight: bold;
+
+    position: absolute;
+    left: 0;
+    margin: 10px;
+}
+
+.descripcion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.descripcion h3 {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.precio {
+    background-color: var(--verde);
+    color: var(--negro-claro);
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.imageDiv img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.valoracion, .no-valoracion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.valoracion img, .no-valoracion img {
+    width: 20px;
+}
+
+
+.no-valoracion {
+    color: var(--gris-claro);
+    font-weight: bold;
+}
+
+.valoracion span {
+    margin-left: -6px;
+    color: var(--gris-claro);
+    font-size: 14px;
+}
+
+section {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#cafesTitle {
+    font-size: 30px;
+    font-weight: bold
+}
+
+#cafesDescription {
+    color: var(--gris-claro);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#cafesButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#cafesButtons button {
+    background-color: transparent;
+    border: 0;
+    color: var(--blanco);
+    padding: .4em 1em;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#buttonActive {
+    background-color: var(--gris-claro) !important;
+}
+
+#padding {
+padding: 1em;
+width: 10px;
+height: 10px;
+background-color: #fff;
 }

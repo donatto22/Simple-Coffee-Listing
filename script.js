@@ -70,11 +70,14 @@ fetch('https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main
     .then(res => res.json())
     // obtenemos los datos del cafe de la api
     .then(data => {
-        console.log(data)
-        data.forEach(cafe => {
+        // data contiene 6 tacitas de cafe
+        // for each va a revisar cada uno de los 6 cafes
+        data.forEach(cafe => { // por cada cafe
+            // creamos una card de cafe
             crearCafe(cafe.name, cafe.price, cafe.rating, cafe.votes, cafe.popular, cafe.image)
         })
     })
+    // en caso que haya un error
     .catch(error => {
         console.log(error)
     })
